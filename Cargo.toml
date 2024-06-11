@@ -1,0 +1,20 @@
+[package]
+name = "lambda"
+version = "0.1.0"
+license = "ISC"
+edition = "2021"
+exclude = ["index.node"]
+
+[lib]
+crate-type = ["cdylib"]
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+anyhow = "1.0.86"
+ethabi = "18.0.0"
+ethers = "2.0.14"
+itertools = "0.13.0"
+neon = "1"
+sha3 = "0.10.8"
+structopt = "0.3.26"
