@@ -1,6 +1,4 @@
 use neon::prelude::*;
-
-
 use anyhow::{anyhow, Ok};
 use ethabi::{
 	decode, encode,

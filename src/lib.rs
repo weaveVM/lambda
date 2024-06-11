@@ -1,17 +1,12 @@
 use neon::prelude::*;
-// use neon::{FunctionContext, JsResult, JsString};
 use crate::utils::ethabiwrapper::{encode_ethabi, decode_ethabi};
-// use anyhow::{Ok};
-
 mod utils;
 
-// fn hello(mut cx: FunctionContext) -> JsResult<JsString> {
-//     Ok(cx.string("hello node"))
-// }
-
-
 fn test_encode(mut cx: FunctionContext) -> JsResult<(JsString)> {
-	let input:String = String::from("weavevm");
+    let input = cx
+    .argument::<JsString>(0)? 
+    .value(&mut cx);
+
     let encode_res: String = encode_ethabi(&input).unwrap();
 	let decode_res: String = decode_ethabi(&encode_res).unwrap();
 
