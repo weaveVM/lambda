@@ -1,7 +1,7 @@
 {
   "name": "lambda",
-  "version": "0.1.0",
-  "description": "",
+  "version": "0.0.1",
+  "description": "lazy evaluated calldata computation",
   "main": "index.node",
   "scripts": {
     "start": "node ./app/index.js",
@@ -14,8 +14,8 @@
     "build": "npm run cargo-build -- --release",
     "cross": "npm run cross-build -- --release"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "charmful0x",
+  "license": "MIT",
   "devDependencies": {
     "@neon-rs/cli": "0.1.73"
   }
