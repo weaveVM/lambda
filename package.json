@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.node",
   "scripts": {
+    "start": "node ./app/index.js",
     "test": "cargo test",
     "cargo-build": "cargo build --message-format=json > cargo.log",
     "cross-build": "cross build --message-format=json > cross.log",
