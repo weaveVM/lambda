@@ -1,3 +1,5 @@
+import { createRequire } from "module";
+const require = createRequire(import.meta.url);
 const ethabi = require("..");
 
 const res = ethabi.rs_encode("weaveGM");

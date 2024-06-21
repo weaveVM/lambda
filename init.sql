@@ -1,0 +1,18 @@
+DROP TABLE IF EXISTS Transactions;
+
+CREATE TABLE IF NOT EXISTS Transactions (
+    Id INT AUTO_INCREMENT PRIMARY KEY,
+    TxId VARCHAR(66) UNIQUE,
+    Type INT,
+    ArweaveTxId TEXT
+);
+
+DROP TABLE IF EXISTS Contracts;
+
+CREATE TABLE IF NOT EXISTS Contracts (
+    Id INT AUTO_INCREMENT PRIMARY KEY,
+    ContractId VARCHAR(66) UNIQUE,
+    SourceCode TEXT,
+    InitState TEXT,
+    LatestState TEXT
+);
