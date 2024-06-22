@@ -20,16 +20,13 @@ export async function uploadDataToIrys(
   TxId,
   Type,
   Caller,
-  VersionedHash,
-  Proof,
-  Commitment,
   Data,
 ) {
   try {
-    const data = { TxId, Type, Caller, VersionedHash, Proof, Commitment, Data };
+    const data = { TxId, Type, Caller, Data };
     const irysConn = await getIrys();
     const tags = [
-      { name: "Protocol", value: "blobvm-testnet" },
+      { name: "Protocol", value: "lambda-testnet" },
       { name: "Content-Type", value: "application/json" },
     ];
     const receipt = await irysConn.upload(JSON.stringify(data), { tags: tags });

@@ -4,7 +4,7 @@ import cors from "cors";
 
 // import { deployContract } from "./utils/deploy.js";
 // import { evaluateTx } from "./utils/transaction.js";
-// import { psGetState } from "./utils/planetscale.js";
+import { psGetState } from "./utils/planetscale.js";
 
 const app = express();
 const port = process.env.PORT || 3000;
@@ -37,6 +37,7 @@ app.get("/state/:id", async (req, res) => {
   try {
     const { id } = req.params;
     const data = await psGetState(id);
+    console.log(data)
     res.json(data);
   } catch (error) {
     console.log(error);
@@ -57,18 +58,18 @@ app.post("/deploy", async (req, res) => {
   }
 });
 
-app.post("/transactions", async (req, res) => {
-  try {
-    const { txid } = req.body;
+// app.post("/transactions", async (req, res) => {
+//   try {
+//     const { txid } = req.body;
 
-    const tx = await evaluateTx(txid);
+//     const tx = await evaluateTx(txid);
 
-    res.send(tx);
-  } catch (error) {
-    console.log(error);
-    return {result: false}
-  }
-});
+//     res.send(tx);
+//   } catch (error) {
+//     console.log(error);
+//     return {result: false}
+//   }
+// });
 
 
 app.listen(port, () => console.log("Server started"));

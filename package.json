@@ -6,6 +6,7 @@
   "main": "index.node",
   "scripts": {
     "start": "node ./app/index.js",
+    "sequencer": "node ./app/server.js",
     "test": "cargo test",
     "cargo-build": "cargo build --message-format=json > cargo.log",
     "cross-build": "cross build --message-format=json > cross.log",
@@ -21,6 +22,8 @@
     "@neon-rs/cli": "0.1.73"
   },
   "dependencies": {
+    "@irys/sdk": "^0.2.5",
+    "@planetscale/database": "^1.18.0",
     "body-parser": "^1.20.2",
     "cors": "^2.8.5",
     "dotenv": "^16.4.5",
