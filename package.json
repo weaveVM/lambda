@@ -5,8 +5,8 @@
   "description": "lazy evaluated calldata computation",
   "main": "index.node",
   "scripts": {
-    "start": "node ./app/index.js",
-    "sequencer": "node ./app/server.js",
+    "start": "node ./sequencer/index.js",
+    "sequencer": "node ./sequencer/server.js",
     "test": "cargo test",
     "cargo-build": "cargo build --message-format=json > cargo.log",
     "cross-build": "cross build --message-format=json > cross.log",
