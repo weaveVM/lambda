@@ -80,6 +80,7 @@ export async function handle(state, action) {
   "counter": 0,
   "users": []
 }
+```
 
 #### Testnet sequencer endpoint: https://wvm-lambda-0755acbdae90.herokuapp.com/
 
