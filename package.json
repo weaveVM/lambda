@@ -6,17 +6,8 @@
   "main": "index.node",
   "scripts": {
     "start": "node ./sequencer/index.js",
-    "sequencer": "node ./sequencer/server.js",
-    "test": "cargo test",
-    "cargo-build": "cargo build --message-format=json > cargo.log",
-    "cross-build": "cross build --message-format=json > cross.log",
-    "postcargo-build": "neon dist < cargo.log",
-    "postcross-build": "neon dist -m /target < cross.log",
-    "debug": "npm run cargo-build --",
-    "build": "npm run cargo-build -- --release",
-    "cross": "npm run cross-build -- --release"
+    "sequencer": "node ./sequencer/server.js"
   },
-  "heroku-run-build-script": false,
   "author": "charmful0x",
   "license": "MIT",
   "devDependencies": {
