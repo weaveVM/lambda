@@ -5,7 +5,7 @@
 </p>
 
 ## Synopsis 
-Lambda (læmdə, Greek: λάμ(β)δα, lám(b)da, λ) is a [smartweave](https://github.com/ArweaveTeam/SmartWeave) execution layer as rollup on top of [WeaveVM testnet](https://wvm.dev). Lambda make use of WeaveVM's DA and [Arweave](https://arweave.org) permanent storage (via WeaveVM as proxy) to facilitate highly complex smart contracts beyon EVM and solidty (bytecode machine) limitations.
+Lambda (læmdə, Greek: λάμ(β)δα, lám(b)da, λ) is a [smartweave](https://github.com/ArweaveTeam/SmartWeave) execution layer as rollup on top of [WeaveVM testnet](https://wvm.dev), more precisely, an [MEM](https://mem.tech) implementation. Lambda make use of WeaveVM's DA and [Arweave](https://arweave.org) permanent storage (via WeaveVM as proxy) to facilitate highly complex smart contracts beyond EVM and solidty (bytecode machine) limitations.
 
 ## Build Locally
 
