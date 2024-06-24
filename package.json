@@ -16,6 +16,7 @@
     "build": "npm run cargo-build -- --release",
     "cross": "npm run cross-build -- --release"
   },
+  "heroku-run-build-script": false,
   "author": "charmful0x",
   "license": "MIT",
   "devDependencies": {
