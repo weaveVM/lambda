@@ -12,6 +12,7 @@ function encodeEvmData(data) {
 
 export async function deployContract(txid) {
   try {
+
     const tx = (await decodeCalldata(txid));
     const data = tx.data;
     const from = tx.from;
@@ -54,4 +55,4 @@ export async function deployContract(txid) {
   }
 }
 
-// deployContract("0xad1ac2f2aa22c97174c738bdb652be0350329e6e0e973bc213fd0279e1f80789")
+deployContract("0x9357462e25e9ba68c5aa3ee703a62c0d9c755852ab2e99f3e65df4603ee1e8f7")
