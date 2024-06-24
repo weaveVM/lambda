@@ -7,6 +7,7 @@ async function readState(contract_address) {
     const state = (
       await axios.get(`${SEQUENCER_ENDPOINT}/state/${contract_address}`)
     )?.data;
+    console.log(state);
     return state;
   } catch (error) {
     console.log(error);
