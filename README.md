@@ -82,7 +82,30 @@ export async function handle(state, action) {
 }
 ```
 
+## Lambda Sequencer
+
+
 #### Testnet sequencer endpoint: https://wvm-lambda-0755acbdae90.herokuapp.com/
+
+### Methods
+
+#### Transaction Type 1: deploy contract
+
+```bash
+curl -X POST https://wvm-lambda-0755acbdae90.herokuapp.com/deploy -H "Content-Type: application/json" -d '{"txid":"$CONTRACT_ADDRESS"}'
+```
+
+#### Transaction Type 2: send interaction
+```bash
+curl -X POST https://wvm-lambda-0755acbdae90.herokuapp.com/transactions -H "Content-Type: application/json" -d '{"txid":"$INTERACTION_TXID"}'
+```
+
+#### Type Agnostic Method: handles both types 1 and 2 automatically
+
+
+```bash
+curl -X POST https://wvm-lambda-0755acbdae90.herokuapp.com/tx -H "Content-Type: application/json" -d '{"txid":"$TXID"}'
+```
 
 For more code examples on how to interact with the Lambda sequencer (deploying contracts, sending interactions, reading state), check the code snippets available in [examples](./examples).
 

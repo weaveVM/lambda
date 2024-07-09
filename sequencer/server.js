@@ -5,6 +5,7 @@ import cors from "cors";
 import { deployContract } from "./utils/deploy.js";
 import { evaluateTx } from "./utils/tx.js";
 import { psGetState } from "./utils/planetscale.js";
+import { handleTx } from "./utils/auto-tx-handler.js";
 
 const app = express();
 const port = process.env.PORT || 3000;
@@ -63,6 +64,20 @@ app.post("/transactions", async (req, res) => {
     const { txid } = req.body;
 
     const tx = await evaluateTx(txid);
+
+    res.send(tx);
+  } catch (error) {
+    console.log(error);
+    return {result: false}
+  }
+});
+
+// auto tx handler, type agnostic (handles both type 1 and 2)
+app.post("/tx", async (req, res) => {
+  try {
+    const { txid } = req.body;
+
+    const tx = await handleTx(txid);
 
     res.send(tx);
   } catch (error) {
