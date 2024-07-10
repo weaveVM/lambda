@@ -36,6 +36,7 @@ export async function decodeCalldata(txid) {
       const res = {
         from: transaction.from,
         to: transaction.to,
+        hash: transaction.hash,
         data: JSON.parse(decodedData)
       }
 

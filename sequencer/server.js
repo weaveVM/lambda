@@ -75,11 +75,17 @@ app.post("/transactions", async (req, res) => {
 // auto tx handler, type agnostic (handles both type 1 and 2)
 app.post("/tx", async (req, res) => {
   try {
-    const { txid } = req.body;
+    const { txid, bulk, txs } = req.body;
 
-    const tx = await handleTx(txid);
-
-    res.send(tx);
+    // TODO: Handle dissapointments
+    if(bulk) {
+      const all = txs.map((tx) => handleTx(tx));
+      const wait = await Promise.allSettled(all);
+      res.send({ result: wait.status === "fulfilled" });
+    } else {
+      const tx = await handleTx(txid);
+      res.send(tx);
+    }
   } catch (error) {
     console.log(error);
     return {result: false}
