@@ -76,6 +76,7 @@ app.post("/transactions", async (req, res) => {
 app.post("/tx", async (req, res) => {
   try {
     const { txid, bulk, txs } = req.body;
+    console.log(`/tx`, req.body);
 
     // TODO: Handle dissapointments
     if(bulk) {
