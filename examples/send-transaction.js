@@ -2,6 +2,8 @@ import { ethers } from "ethers";
 import axios from "axios";
 import dotenv from "dotenv";
 dotenv.config();
+
+const SEQUENCER_ADDRESS = "0x197f818c1313dc58b32d88078ecdfb40ea822614";
 const WVM_RPC_URL= "https://testnet-rpc.wvm.dev"
 const SEQUENCER_ENDPOINT = "https://wvm-lambda-0755acbdae90.herokuapp.com";
 
