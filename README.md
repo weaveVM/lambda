@@ -85,7 +85,7 @@ export async function handle(state, action) {
 ## Lambda Sequencer
 
 
-#### Testnet sequencer endpoint: https://wvm-lambda-0755acbdae90.herokuapp.com/
+#### Testnet sequencer endpoint: https://lambda.pink
 
 ### Methods
 
