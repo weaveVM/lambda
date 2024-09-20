@@ -14,5 +14,5 @@ CREATE TABLE IF NOT EXISTS Contracts (
     ContractId VARCHAR(66) UNIQUE,
     SourceCode TEXT,
     InitState TEXT,
-    LatestState TEXT
+    LatestState LONGTEXT
 );
